@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body class="light-mode">
+  <div class="container">
+ 
+    <header>
+      <h3>calc</h3>
+      <button class="toggle-btn" onclick="toggleMode()">Switch to Dark Mode</button>
+    </header>
+     
+    <div class="calculator">
+      <input type="text" name="" id="result" readonly/>
+    
+      <div class="buttons">
+     <button onclick="appendToResult('7')" class="numbers">7</button>
+     <button onclick="appendToResult('8')" class="numbers">8</button>
+     <button onclick="appendToResult('9')" class="numbers">9</button>
+     <button onclick="removeInput()" class="delete">Del</button>
+     <button onclick="appendToResult('4')" class="numbers">4</button>
+     <button onclick="appendToResult('5')" class="numbers">5</button>
+     <button onclick="appendToResult('6')" class="numbers">6</button>
+     <button onclick="appendToResult('+')" class="numbers">+</button>
+     <button onclick="appendToResult('1')" class="numbers">1</button>
+     <button onclick="appendToResult('2')" class="numbers">2</button>
+     <button onclick="appendToResult('3')" class="numbers">3</button>
+     <button onclick="appendToResult('-')" class="numbers">-</button>
+     <button onclick="appendToResult('.')" class="numbers">.</button>
+     <button onclick="appendToResult('0')" class="numbers">0</button>
+     <button onclick="appendToResult('/')" class="numbers">/</button>
+     <button onclick="appendToResult('*')" class="numbers">x</button>
+     <button onclick="resetInput()" class="reset">Reset</button>
+     <button onclick="calculateResult()" class="calculate">=</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  
+  
+  
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Godspower</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
