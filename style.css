@@ -1,5 +1,5 @@
-*{
-    margin: 0;
+
+   *{ margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "League Spartan", sans-serif;
@@ -14,7 +14,7 @@ body{
     margin:6rem auto;
 }
 
-input{
+.calculator input{
     width: 100%;
     text-align: end;
     padding: 5px;
@@ -43,7 +43,7 @@ input{
 .light-mode .buttons{
     background-color: hsl(0, 5%, 81%);
 }
-.light-mode input{
+.light-mode .calculator input{
     background-color: white;
     border: none;
     color: hsl(60, 10%, 19%);
@@ -94,7 +94,7 @@ input{
     
     background-color: hsl(223, 31%, 20%);
 }
-.dark-mode input{
+.dark-mode .calculator input{
     background-color: hsl(224, 36%, 15%);
     border: none;
     color: white;
@@ -153,12 +153,49 @@ header button{
     padding: 4px;
     cursor: pointer;
 }
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+header input {
+    display: none;
+}
+.slider {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.3s;
+}
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+input:checked + .slider {
+    background-color:hsl(225, 21%, 49%) ;
+}
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+
+
 .calculator{
     padding: 0.5rem 0.8rem;
     
     
 }
-input{
+.calculator input{
     width: 100%;
     text-align: end;
     padding: 5px;
